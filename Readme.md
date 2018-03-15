@@ -31,6 +31,7 @@ This readme file is targeted for QA Automation engineers
  * Go to **{ACCEPTANCE_SRC}/docker-compose/**
  * Execute **sh startAT.sh**(It will download all necessary docker images). Or execute **docker-compose up** if you have already pulled all necessary docker images
  * Allure tests report is available by link **http://127.0.0.1:8082/**
+ * Video record is available at directory **{ACCEPTANCE_SRC}/docker-compose**
  
 #### Without Docker
  * Open a terminal or command prompt
