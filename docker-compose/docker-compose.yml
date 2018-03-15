@@ -13,7 +13,6 @@ services:
     environment:
       - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD
     command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video"]
-#    env_file: compose.env
 
   selenoid-ui:
     image: "aerokube/selenoid-ui"

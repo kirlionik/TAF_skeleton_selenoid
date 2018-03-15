@@ -255,14 +255,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <profiles>
-        <profile>
-            <id>docker</id>
-            <properties>
-                <docker>false</docker>
-            </properties>
-        </profile>
-    </profiles>
     <build>
         <pluginManagement>
             <plugins>
@@ -320,15 +312,14 @@
                             <goal>build</goal>
                             <goal>push</goal>
                         </goals>
+                        <phase>site</phase>
                     </execution>
                 </executions>
                 <configuration>
-                    <skip>${docker}</skip>
                     <finalName>at-tests</finalName>
                     <repository>at_selenoid</repository>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 </project>
