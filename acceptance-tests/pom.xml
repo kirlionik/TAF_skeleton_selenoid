@@ -63,11 +63,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-http-lightweight</artifactId>
-                <version>3.0.0</version>
-            </plugin>
         </plugins>
     </build>
 
