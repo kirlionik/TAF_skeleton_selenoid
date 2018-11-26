@@ -48,4 +48,5 @@ This readme file is targeted for QA Automation engineers
 * Docker compose : folder **{ACCEPTANCE_SRC}/docker-compose/**
 #### Browsers configuration
 * System variable: **WEBDRIVER_BROWSER**. There are four browsers available: "Firefox", "Chrome", "Chrome_Selenoid", "Firefox_Selenoid"
+* The default browser is  "Firefox_Selenoid"
 

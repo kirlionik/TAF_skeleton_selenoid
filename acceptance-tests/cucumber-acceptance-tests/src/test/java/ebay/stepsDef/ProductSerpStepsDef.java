@@ -15,7 +15,6 @@
 */
 package ebay.stepsDef;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
@@ -50,12 +49,12 @@ public class ProductSerpStepsDef extends AbstractStepsDef{
     @And("^Check that Button 'Action' is present$")
     public void checkThatButtonActionIsPresent() throws Throwable {
         attachments.attachScreenShot("Check that Button 'Action' is present");
-        assertThat(serpPage.isButtomAction()).as("Check that Button 'Action' is present").isTrue();
+        assertThat(serpPage.getButtonAction()).as("Check that Button 'Action' is present").isTrue();
     }
 
     @And("^Check that Button 'Buy It Now' is present$")
     public void checkThatButtonBuyItNowIsPresent() throws Throwable {
         attachments.attachScreenShot("Check that Button 'Buy It Now' is presen");
-        assertThat(serpPage.isButtomBuyItNow()).as("Check that Button 'Buy It Now' is present").isTrue();
+        assertThat(serpPage.getButtonBuyItNow()).as("Check that Button 'Buy It Now' is present").isTrue();
     }
 }
