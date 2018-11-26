@@ -24,8 +24,8 @@
         <selenium.version>3.10.0</selenium.version>
         <webdrivermanager.version>1.6.2</webdrivermanager.version>
         <assertj.version>3.6.2</assertj.version>
-        <spring.version>4.3.6.RELEASE</spring.version>
-        <spring.ws>2.4.0.RELEASE</spring.ws>
+        <spring.version>5.1.2.RELEASE</spring.version>
+        <spring.ws>3.0.4.RELEASE</spring.ws>
         <javaslang.version>2.0.6</javaslang.version>
         <lombok.version>1.16.16</lombok.version>
         <streamex.version>0.6.5</streamex.version>
