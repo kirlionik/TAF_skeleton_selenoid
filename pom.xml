@@ -22,7 +22,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!--libs versions-->
         <selenium.version>3.10.0</selenium.version>
-        <webdrivermanager.version>1.6.2</webdrivermanager.version>
+        <webdrivermanager.version>3.0.0</webdrivermanager.version>
         <assertj.version>3.6.2</assertj.version>
         <spring.version>5.1.2.RELEASE</spring.version>
         <spring.ws>3.0.4.RELEASE</spring.ws>

@@ -17,6 +17,7 @@ package org.exampleProject.qa.common.gui.configuration;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.FirefoxDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
 import org.exampleProject.qa.common.gui.services.webdriver.WrappedWebdriver;
 import org.openqa.selenium.WebDriver;
@@ -113,14 +114,14 @@ public class WebdriverConfig {
     }
 
     private WrappedWebdriver initFirefox() {
-        FirefoxDriverManager.getInstance().arch32().setup();
+        WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
         driver.manage().window().maximize();
         return new WrappedWebdriver(driver);
     }
 
     private WrappedWebdriver initChrome() {
-        ChromeDriverManager.getInstance().arch32().setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         return new WrappedWebdriver(driver);
