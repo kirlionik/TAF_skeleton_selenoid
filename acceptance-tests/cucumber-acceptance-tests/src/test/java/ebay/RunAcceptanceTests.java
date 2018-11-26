@@ -23,7 +23,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         strict = true,
         plugin = {
-                "com.github.kirlionik.cucumberallure.AllureReporter",
+//                "com.github.kirlionik.cucumberallure.AllureReporter",
+                "io.qameta.allure.cucumberjvm.AllureCucumberJvm",
                 "html:target/cucumber-html-report"
         },tags = {"~@Ignore", "~@InDev"}
 )

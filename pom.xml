@@ -32,7 +32,8 @@
         <logback.version>1.1.3</logback.version>
         <aspectj.version>1.8.10</aspectj.version>
         <janino.version>2.5.10</janino.version>
-        <allure.version>1.4.23</allure.version>
+        <!--<allure.version>1.4.23</allure.version>-->
+        <allure.version>2.8.1</allure.version>
         <!--Junit-->
         <junit.version>4.12</junit.version>
         <junit.jupiter.version>5.0.0-M4</junit.jupiter.version>
@@ -202,24 +203,29 @@
                 <version>${cucumber.version}</version>
             </dependency>
             <!-- Reporting: Yandex Allure-->
+            <!--<dependency>-->
+                <!--<groupId>ru.yandex.qatools.allure</groupId>-->
+                <!--<artifactId>allure-commons</artifactId>-->
+                <!--<version>${allure.version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>ru.yandex.qatools.allure</groupId>-->
+                <!--<artifactId>allure-java-aspects</artifactId>-->
+                <!--<version>${allure.version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>com.github.kirlionik</groupId>-->
+                <!--<artifactId>allure-cucumber-plugin</artifactId>-->
+                <!--<version>${allure.cucumber.plugin.version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>ru.yandex.qatools.allure</groupId>-->
+                <!--<artifactId>allure-java-annotations</artifactId>-->
+                <!--<version>${allure.version}</version>-->
+            <!--</dependency>-->
             <dependency>
-                <groupId>ru.yandex.qatools.allure</groupId>
-                <artifactId>allure-commons</artifactId>
-                <version>${allure.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ru.yandex.qatools.allure</groupId>
-                <artifactId>allure-java-aspects</artifactId>
-                <version>${allure.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kirlionik</groupId>
-                <artifactId>allure-cucumber-plugin</artifactId>
-                <version>${allure.cucumber.plugin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ru.yandex.qatools.allure</groupId>
-                <artifactId>allure-java-annotations</artifactId>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-cucumber-jvm</artifactId>
                 <version>${allure.version}</version>
             </dependency>
             <!--Plugins-->
@@ -272,22 +278,22 @@
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>2.20</version>
                 </plugin>
-                <plugin>
-                    <groupId>ru.yandex.qatools.allure</groupId>
-                    <artifactId>allure-maven-plugin</artifactId>
-                    <version>2.6</version>
-                    <configuration>
-                        <version>1.4.24.RC2</version>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>report</goal>
-                            </goals>
-                            <phase>post-integration-test</phase>
-                        </execution>
-                    </executions>
-                </plugin>
+                <!--<plugin>-->
+                    <!--<groupId>ru.yandex.qatools.allure</groupId>-->
+                    <!--<artifactId>allure-maven-plugin</artifactId>-->
+                    <!--<version>2.6</version>-->
+                    <!--<configuration>-->
+                        <!--<version>1.4.24.RC2</version>-->
+                    <!--</configuration>-->
+                    <!--<executions>-->
+                        <!--<execution>-->
+                            <!--<goals>-->
+                                <!--<goal>report</goal>-->
+                            <!--</goals>-->
+                            <!--<phase>post-integration-test</phase>-->
+                        <!--</execution>-->
+                    <!--</executions>-->
+                <!--</plugin>-->
                 <plugin>
                     <groupId>net.alchim31.maven</groupId>
                     <artifactId>scala-maven-plugin</artifactId>
@@ -297,6 +303,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>io.qameta.allure</groupId>
+                    <artifactId>allure-maven</artifactId>
+                    <version>2.9</version>
                 </plugin>
             </plugins>
         </pluginManagement>
