@@ -22,6 +22,7 @@ import org.exampleProject.qa.common.gui.services.pages.HomePageObject;
 import org.exampleProject.qa.common.gui.services.pages.MainSearchFormPageObject;
 import org.exampleProject.qa.common.gui.services.pages.ProductCardPageIObject;
 import org.exampleProject.qa.common.gui.services.pages.SerpPageObject;
+import org.exampleProject.qa.common.gui.services.webdriver.WebdriverHelper;
 import org.exampleProject.qa.common.gui.services.webdriver.WrappedWebdriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -40,6 +41,10 @@ public class AbstractStepsDef {
     @Autowired
     @Lazy
     public WrappedWebdriver driver;
+
+    @Autowired
+    @Lazy
+    WebdriverHelper wdHelper;
 
     @Autowired
     @Lazy

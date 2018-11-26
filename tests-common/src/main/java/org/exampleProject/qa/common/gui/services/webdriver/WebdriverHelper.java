@@ -235,4 +235,8 @@ public class WebdriverHelper {
                 .getWrappedDriver())
                 .executeScript("if (document.activeElement != document.body) document.activeElement.blur();");
     }
+
+    public void waitForElementIsPresent(By locator) {
+        new WebDriverWait(driver.getWrappedDriver(), 20).until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
 }

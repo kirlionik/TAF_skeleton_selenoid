@@ -1,15 +1,15 @@
 Feature: Search Test
   As a user I should be able submit search request
 
-  @SeverityLevel.CRITICAL @TestCaseId("example-1")
-  Scenario Outline: Search Checking for unauthorized user
-    Given I open home page
-    When I perform search by request "<request>"
-    Then URL of product search page should be valid
-    Examples:
-      | request |
-      | Android |
-      | Iphone  |
+#  @SeverityLevel.CRITICAL @TestCaseId("example-1")
+#  Scenario Outline: Search Checking for unauthorized user
+#    Given I open home page
+#    When I perform search by request "<request>"
+#    Then URL of product search page should be valid
+#    Examples:
+#      | request |
+#      | Android |
+#      | Iphone  |
 
   Scenario: Common Elements
     Given I open home page

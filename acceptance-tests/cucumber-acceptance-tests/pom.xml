@@ -16,6 +16,7 @@
         <junit.parallel/>
         <run.classes>**/RunAcceptanceTests.class</run.classes>
         <rpEnabled>false</rpEnabled>
+        <allure.results.directory>../allure-results</allure.results.directory>
     </properties>
     <dependencies>
         <!--Modules of TAF-->
@@ -111,17 +112,21 @@
             <artifactId>cucumber-java</artifactId>
         </dependency>
         <!-- Reporting: Yandex Allure-->
+        <!--<dependency>-->
+            <!--<groupId>ru.yandex.qatools.allure</groupId>-->
+            <!--<artifactId>allure-commons</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>ru.yandex.qatools.allure</groupId>-->
+            <!--<artifactId>allure-java-aspects</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.github.kirlionik</groupId>-->
+            <!--<artifactId>allure-cucumber-plugin</artifactId>-->
+        <!--</dependency>-->
         <dependency>
-            <groupId>ru.yandex.qatools.allure</groupId>
-            <artifactId>allure-commons</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>ru.yandex.qatools.allure</groupId>
-            <artifactId>allure-java-aspects</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.kirlionik</groupId>
-            <artifactId>allure-cucumber-plugin</artifactId>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber-jvm</artifactId>
         </dependency>
         <!--plugins-->
         <dependency>
@@ -166,7 +171,8 @@
                         <include>${run.classes}</include>
                     </includes>
                     <argLine>
-                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        -Dcucumber.options="--plugin io.qameta.allure.cucumberjvm.AllureCucumberJvm"
                     </argLine>
                     <systemProperties>
                         <rpEnabled>${rpEnabled}</rpEnabled>
@@ -199,8 +205,11 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>ru.yandex.qatools.allure</groupId>
-                <artifactId>allure-maven-plugin</artifactId>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <configuration>
+                    <reportDirectory>allure-report</reportDirectory>
+                </configuration>
             </plugin>
         </plugins>
     </build>

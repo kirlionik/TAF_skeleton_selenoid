@@ -15,6 +15,7 @@ package org.exampleProject.qa.common.gui.services.pages;
 * limitations under the License.
 */
 import org.exampleProject.qa.common.gui.services.attachments.Attachments;
+import org.exampleProject.qa.common.gui.services.webdriver.WebdriverHelper;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -29,4 +30,8 @@ public class AbstractPageObject {
 
     @Autowired @Lazy
     protected Attachments attachments;
+
+    @Autowired
+    @Lazy
+    WebdriverHelper wdHelper;
 }

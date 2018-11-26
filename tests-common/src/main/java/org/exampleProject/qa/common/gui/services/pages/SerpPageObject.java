@@ -29,16 +29,21 @@ import java.util.List;
  */
 @PageObject
 public class SerpPageObject extends AbstractPageObject{
-    @FindBy(xpath = "//*[@id='ListViewInner']/li")
+    private final String snippetListLocator = ".//*[@id='ListViewInner']/li";
+    private final String buttonActionLocator = ".//*[@id='cbelm']//a[text()='Auction']";
+    private final String buttonBuyItNowLocator = ".//*[@id='cbelm']//a[text()='Buy It Now']";
+
+    @FindBy(xpath = snippetListLocator)
     List<WebElement> snippetList;
 
-    @FindBy(xpath = "//*[@id='cbelm']//a[text()='Auction']")
-    List<WebElement> buttomAction;
+    @FindBy(xpath = buttonActionLocator)
+    List<WebElement> buttonAction;
 
-    @FindBy(xpath = "//*[@id='cbelm']//a[text()='Buy It Now']")
-    List<WebElement> buttomBuyItNow;
+    @FindBy(xpath = buttonBuyItNowLocator)
+    List<WebElement> buttonBuyItNow;
 
     public List<SerpSnippet> getSnippets(){
+        wdHelper.waitForElementIsPresent(By.xpath(snippetListLocator));
         return StreamEx.of(snippetList)
                 .map(this::toSnippet)
                 .toList();
@@ -49,16 +54,16 @@ public class SerpPageObject extends AbstractPageObject{
         return new SerpSnippet(title);
     }
 
-    public boolean isButtomAction(){
-        if(buttomAction.size()==1){
+    public boolean getButtonAction(){
+        if(buttonAction.size()==1){
             return true;
         }else{
             return false;
         }
     }
 
-    public boolean isButtomBuyItNow(){
-        if(buttomBuyItNow.size()==1){
+    public boolean getButtonBuyItNow(){
+        if(buttonBuyItNow.size()==1){
             return true;
         }else{
             return false;
