@@ -1,16 +1,17 @@
 Feature: Search Test
   As a user I should be able submit search request
 
-#  @SeverityLevel.CRITICAL @TestCaseId("example-1")
-#  Scenario Outline: Search Checking for unauthorized user
-#    Given I open home page
-#    When I perform search by request "<request>"
-#    Then URL of product search page should be valid
-#    Examples:
-#      | request |
-#      | Android |
-#      | Iphone  |
+  @severity=blocker @tmsLink=Test-Case-2 @UserStoryId=Test-2 @issue=ebay-1006
+  Scenario Outline: Search Checking for unauthorized user
+    Given I open home page
+    When I perform search by request "<request>"
+    Then URL of product search page should be valid
+    Examples:
+      | request |
+      | Android |
+      | Iphone  |
 
+  @severity=blocker @tmsLink=Test-Case-1 @UserStoryId=Test-401 @issue=ebay-1006
   Scenario: Common Elements
     Given I open home page
     And I change language of site to English
