@@ -11,7 +11,7 @@ Feature: Search Test
       | Android |
       | Iphone  |
 
-  @severity=blocker @tmsLink=Test-Case-1 @UserStoryId=Test-401 @issue=ebay-1006
+  @severity=critical @tmsLink=Test-Case-1 @UserStoryId=Test-401 @issue=ebay-1006
   Scenario: Common Elements
     Given I open home page
     And I change language of site to English

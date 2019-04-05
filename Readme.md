@@ -21,6 +21,13 @@ This readme file is targeted for QA Automation engineers
 * Execute **mvn clean install -Dmaven.test.skip=true**
 
 
+### Configuration acceptance tests
+#### Docker configuration
+* Docker image creation : **{ACCEPTANCE_SRC}/Dockerfile**
+* Docker compose : folder **{ACCEPTANCE_SRC}/docker-compose/**
+#### Browsers configuration
+* System variable: **WEBDRIVER_BROWSER**. There are four browsers available: "Firefox", "Chrome", "Chrome_Selenoid", "Firefox_Selenoid"
+* The default browser is  "Chrome"
 
 ### Run acceptance tests
 
@@ -39,7 +46,8 @@ This readme file is targeted for QA Automation engineers
  * Execute **mvn clean install -Dmaven.test.skip=true**
  * Go to **{ACCEPTANCE_SRC}/acceptance-tests/cucumber-acceptance-tests/**
  * Execute **mvn clean install**
- * Allure tests report is available at **{ACCEPTANCE_SRC}/acceptance-tests/cucumber-acceptance-tests/target/site/allure-maven-plugin/index.html**
+ * Execute **mvn allure:report**
+ * Allure tests report is available at **{ACCEPTANCE_SRC}/acceptance-tests/cucumber-acceptance-tests/target/allure-report**
  
  
 ### Configuration acceptance tests

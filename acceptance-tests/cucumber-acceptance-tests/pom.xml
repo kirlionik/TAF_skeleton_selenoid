@@ -112,18 +112,6 @@
             <artifactId>cucumber-java</artifactId>
         </dependency>
         <!-- Reporting: Yandex Allure-->
-        <!--<dependency>-->
-            <!--<groupId>ru.yandex.qatools.allure</groupId>-->
-            <!--<artifactId>allure-commons</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>ru.yandex.qatools.allure</groupId>-->
-            <!--<artifactId>allure-java-aspects</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.github.kirlionik</groupId>-->
-            <!--<artifactId>allure-cucumber-plugin</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber-jvm</artifactId>
@@ -132,10 +120,6 @@
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>ru.yandex.qatools.allure</groupId>
-            <artifactId>allure-maven-plugin</artifactId>
         </dependency>
     </dependencies>
     <profiles>
@@ -208,7 +192,7 @@
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
                 <configuration>
-                    <reportDirectory>allure-report</reportDirectory>
+                    <reportDirectory>${project.basedir}/target/allure-report</reportDirectory>
                 </configuration>
             </plugin>
         </plugins>

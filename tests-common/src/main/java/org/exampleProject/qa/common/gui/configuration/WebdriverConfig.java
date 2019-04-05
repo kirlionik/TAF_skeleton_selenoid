@@ -48,7 +48,7 @@ public class WebdriverConfig {
     private final String CHROME_SELENOID = "Chrome_Selenoid";
     private final String FIREFOX_SELENOID = "Firefox_Selenoid";
 
-    @Value("${WEBDRIVER_BROWSER:"+FIREFOX_SELENOID+"}")
+    @Value("${WEBDRIVER_BROWSER:"+CHROME+"}")
     private String browserName;
 
     @Value("${SELENOID_URL:127.0.0.1:4444}")
